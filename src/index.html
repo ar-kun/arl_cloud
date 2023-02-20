@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet" />
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+   integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+  />
+  <script>
+   if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+   } else {
+    document.documentElement.classList.remove('dark');
+   }
+  </script>
+ </head>
+ <body>
+  <!-- header start -->
+  <header class="fixed top-0 left-0 z-10 flex w-full items-center bg-transparent">
+   <div class="container p-0">
+    <div class="relative flex items-center justify-between">
+     <div class="flex items-center self-center px-4">
+      <a href="#home" class="flex h-16 w-16 items-center text-lg font-bold text-primary"><img src="../dist/img/logo.png" alt="" /></a>
+     </div>
+     <div class="flex items-center px-4">
+      <button id="humburger" name="humburger" type="button" class="absolute right-4 block">
+       <span class="humburger-line origin-top-left"></span>
+       <span class="humburger-line"></span>
+       <span class="humburger-line origin-bottom-left"></span>
+      </button>
+      <nav
+       id="nav-menu"
+       class="absolute right-0 top-full hidden w-full max-w-[250px] rounded-lg bg-sky-100 py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 min-h-screen lg:max-w-[350px] lg:-right-28"
+      >
+       <ul class="block">
+        <li class="group"><a href="#cloud" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Cloud</a></li>
+        <li class="group"><a href="#pengguna" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Pengguna</a></li>
+        <li class="group">
+         <a href="#keuntungan" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Keuntungan</a>
+        </li>
+        <li class="group"><a href="#jenis" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Jenis-Jenis</a></li>
+        <li class="group"><a href="#penerapan" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Penerapan</a></li>
+        <li class="group"><a href="#layanan" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Layanan</a></li>
+        <li class="mt-3 flex items-center pl-8">
+         <div class="flex">
+          <span class="mr-2 text-sm text-slate-500"><i class="fa-regular fa-sun"></i></span>
+          <input type="checkbox" class="hidden" id="darkToggle" />
+          <label for="darkToggle">
+           <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+           </div>
+          </label>
+          <span class="ml-2 text-sm text-slate-500"><i class="fa-solid fa-moon"></i></span>
+         </div>
+        </li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <!-- header end -->
+  <main class="my-20">
+   <section>
+    <div class="container">
+     <div class="flex flex-col items-center justify-center text-justify gap-5 my-10" id="cloud">
+      <h1 class="dark:text-white text-2xl font-bold text-center">Cloud</h1>
+      <!-- <img class="float-left ..." src="path/to/image.jpg" />
+      <p>Maybe we can live without libraries, people like you and me. ...</p> -->
+      <div class="block w-full md:[&>*]:my-5 md:[&>p>span]:py-1 bg-sky-200 rounded-md shadow-lg p-5 dark:bg-slate-600 dark:[&>p]:text-white">
+       <img src="../dist/img/cloud.jpg" alt="" class="w-full max-w-lg md:float-left sm:px-10" />
+       <p>
+        Apa yang kamu pikirkan ketika mendengar kata Cloud ? Jika kamu membayangkan sebuah awan maka itu tidak salah karena memang kebanyakan
+        ilustrasi jaringan komputer mamuat simbol cloud atau awan yang merupakan perumpamaan dari internet.
+       </p>
+       <p class="[&>span]:block">
+        <span
+         >Menurut AWS, cloud atau sering disebut cloud computing adalah penggunaan sesuai kebutuhan (on-demand) sumber daya IT melalui internet dengan
+         harga sesuai pemakaian (pay-as-you-go).</span
+        ><span>
+         Cloud Computing merupakan gaya komputasi baru di mana sumber daya yang terukur secara dinamis dan sering kali menggunakan konsep virtualisasi
+         yang disediakan oleh provider dengan memanfaatkan media internet. </span
+        ><span>
+         Secara konsep, definisi Cloud Computing berarti menyimpan dan mengakses data dan program melalui internet dari lokasi berbeda atau
+         menggunakan komputer dari hard drive komputer kita. Syarat utama dalam konsep Cloud Computing adalah kehadiran internet untuk mengakses
+         data.</span
+        >
+       </p>
+      </div>
+     </div>
+     <div
+      class="flex flex-col items-center justify-center text-justify gap-5 my-10 [&>p]:bg-sky-200 dark:[&>p]:bg-slate-600 dark:[&>p]:text-white [&>p]:rounded-md [&>p]:shadow-lg [&>p]:p-5"
+      id="pengguna"
+     >
+      <h1 class="dark:text-white text-2xl font-bold text-cente">Siapa yang menggunakan komputasi cloud?</h1>
+      <p>
+       Berbagai jenis, ukuran, dan industri organisasi menggunakan cloud untuk bermacam-macam penggunaan, seperti pencadangan data, pemulihan bencana,
+       email, desktop virtual, pengembangan dan pengujian perangkat lunak, analitik big data, serta aplikasi web tatap muka dengan pelanggan.
+       Misalnya, perusahaan layanan kesehatan menggunakan cloud untuk mengembangkan perawatan yang lebih dipersonalisasi bagi pasien. Perusahaan
+       layanan finansial menggunakan cloud untuk mendukung pencegahan dan deteksi penipuan real-time. Dan kreator video game menggunakan cloud untuk
+       menyediakan game online kepada jutaan pemain di seluruh dunia.
+      </p>
+     </div>
+     <div
+      class="flex flex-col items-center justify-center text-justify gap-5 my-10 [&>p]:bg-sky-200 dark:[&>p]:bg-slate-600 dark:[&>p]:text-white [&>p]:rounded-md [&>p]:shadow-lg [&>p]:p-5"
+      id="keuntungan"
+     >
+      <h1 class="dark:text-white text-2xl font-bold text-cente">Keuntungan komputasi cloud</h1>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span> Ketangkasan </span
+       ><span
+        >Cloud memberikan akses mudah ke berbagai teknologi agar Anda dapat berinovasi lebih cepat dan membangun apa pun yang Anda impikan. Anda dapat
+        dengan cepat menyediakan sumber daya saat dibutuhkan–mulai dari layanan infrastruktur, seperti komputasi, penyimpanan, dan basis data, hingga
+        Internet untuk Segala, machine learning, danau data dan analitik, serta banyak lagi.</span
+       ><span
+        >Anda dapat melakukan deployment layanan teknologi dalam hitungan menit, dan mewujudkan urutan magnitudo yang lebih cepat dari sebelumnya.
+        Dengan begitu, Anda dapat melakukan eksperimen dengan bebas, menguji ide-ide baru untuk mendapat pengalaman pelanggan yang berbeda, dan
+        mengubah bisnis Anda.</span
+       >
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span> Elastisitas </span
+       ><span
+        >Dengan komputasi cloud, Anda tidak perlu menyediakan sumber daya secara berlebihan di awal untuk mengatasi aktivitas bisnis yang meningkat di
+        kemudian hari. Anda dapat menyediakan jumlah sumber daya yang sesuai dengan kebutuhan Anda. Anda dapat meningkatkan atau menurunkan skala
+        sumber daya untuk menambah atau mengurangi kapasitas secara instan sesuai dengan perubahan kebutuhan bisnis Anda.</span
+       >
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span> Penghematan Biaya </span
+       ><span
+        >Cloud memungkinkan Anda untuk mengganti biaya tetap (seperti pusat data dan server fisik) dengan biaya variabel, dan membayar hanya untuk IT
+        yang Anda gunakan. Selain itu, biaya variabel akan jauh lebih rendah dibandingkan dengan yang harus dibayar jika Anda mengurusnya sendiri
+        karena skala ekonomi.</span
+       >
+      </p>
+     </div>
+     <div
+      class="flex flex-col items-center justify-center text-justify gap-5 my-10 [&>p]:bg-sky-200 dark:[&>p]:bg-slate-600 dark:[&>p]:text-white [&>p]:rounded-md [&>p]:shadow-lg [&>p]:p-5"
+      id="jenis"
+     >
+      <h1 class="dark:text-white text-2xl font-bold text-cente">Jenis-jenis komputasi cloud</h1>
+      <p>
+       Tiga jenis utama komputasi cloud mencakup Infrastructure as a Service, Platform as a Service, dan Software as a Service. Setiap jenis komputasi
+       cloud memberikan tingkat kontrol, fleksibilitas, dan pengelolaan yang berbeda sehingga Anda dapat memilih rangkaian layanan yang tepat sesuai
+       dengan kebutuhan.
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Infrastructure as a Service (IaaS)</span
+       ><span>
+        IaaS berisi blok pembangun dasar untuk IT cloud. Layanan ini memberikan akses ke fitur jaringan, komputer (perangkat keras virtual atau
+        khusus), serta ruang penyimpanan data. IaaS memberikan tingkat fleksibilitas dan kontrol pengelolaan tertinggi atas sumber daya IT. Layanan
+        ini sangat mirip dengan sumber daya IT yang sudah ada dan banyak diketahui oleh departemen dan pengembang IT.</span
+       >
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Platform as a Service (PaaS)</span
+       ><span>
+        PaaS memungkinkan Anda fokus pada penerapan dan pengelolaan aplikasi tanpa perlu mengelola infrastruktur dasar (biasanya perangkat keras dan
+        sistem operasi). Hal ini membantu Anda lebih efisien karena tidak perlu lagi khawatir mengenai pengadaan sumber daya, perencanaan kapasitas,
+        pemeliharaan perangkat lunak, patching, atau pengangkatan beban yang tidak terdiferensiasi lainnya yang terjadi saat menjalankan aplikasi.
+       </span>
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Software as a Service (SaaS)</span
+       ><span>
+        SaaS menyediakan produk lengkap yang dijalankan dan dikelola oleh penyedia layanan. Orang yang merujuk ke SaaS biasanya mengacu pada aplikasi
+        pengguna akhir (seperti email berbasis web). Dengan penawaran SaaS, Anda tidak perlu memikirkan cara memelihara layanan atau cara mengelola
+        infrastruktur dasar. Anda hanya perlu mengetahui cara menggunakan perangkat lunak khusus tersebut.</span
+       >
+      </p>
+     </div>
+     <div
+      class="flex flex-col items-center justify-center text-justify gap-5 my-10 [&>p]:bg-sky-200 dark:[&>p]:bg-slate-600 dark:[&>p]:text-white [&>p]:rounded-md [&>p]:shadow-lg [&>p]:p-5"
+      id="penerapan"
+     >
+      <h1 class="dark:text-white text-2xl font-bold text-cente">Model Penerapan Komputasi Cloud</h1>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Cloud</span
+       ><span
+        >Aplikasi berbasis cloud sepenuhnya diterapkan di cloud dan semua bagian aplikasi berjalan di cloud. Aplikasi di cloud telah dibuat di cloud
+        atau telah bermigrasi dari infrastruktur yang ada untuk memanfaatkan keuntungan dari komputasi cloud. Aplikasi berbasis cloud dapat dibangun
+        pada potongan infrastruktur tingkat rendah atau dapat menggunakan layanan tingkat lebih tinggi yang menyediakan abstraksi dari persyaratan
+        manajemen, arsitektur, dan penskalaan infrastruktur inti.</span
+       >
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Hybrid</span
+       ><span
+        >Penerapan hybrid adalah cara untuk menghubungkan infrastruktur dan aplikasi antara sumber daya berbasis cloud dan sumber daya yang ada yang
+        tidak terletak di cloud. Metode penerapan hibrida yang paling umum adalah antara cloud dan infrastruktur lokal yang ada memperluas dan
+        menumbuhkan infrastruktur organisasi ke dalam cloud saat menghubungkan sumber daya cloud ke sistem internal. Untuk informasi lebih lanjut
+        tentang bagaimana AWS dapat membantu Anda dengan penerapan hibrida Anda, silakan kunjungi halaman hibrida kami.
+       </span>
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Lokal</span
+       ><span
+        >Penerapan sumber daya di lokasi, dengan menggunakan alat manajemen sumber daya dan virtualisasi, kadang-kadang disebut "cloud pribadi".
+        Penerapan di lokasi tidak memberikan banyak manfaat komputasi cloud, tetapi terkadang dicari karena kemampuannya untuk menyediakan sumber daya
+        khusus. Dalam banyak kasus, model penerapan ini sama dengan infrastruktur IT lama saat menggunakan manajemen aplikasi dan teknologi
+        virtualisasi untuk mencoba dan meningkatkan pemanfaatan sumber daya.</span
+       >
+      </p>
+     </div>
+     <div
+      class="flex flex-col items-center justify-center text-justify gap-5 my-10 [&>p]:bg-sky-200 dark:[&>p]:bg-slate-600 dark:[&>p]:text-white [&>p]:rounded-md [&>p]:shadow-lg [&>p]:p-5"
+      id="layanan"
+     >
+      <h1 class="dark:text-white text-2xl font-bold text-cente">Penyedia Layanan Cloud</h1>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>AWS</span
+       ><span
+        >Amazon Web Services menyediakan layanan cloud terluas yang tersedia di seluruh dunia. Untuk mempelajari lebih lanjut tentang manfaat
+        penerapan aplikasi berikutnya dengan AWS, kunjungi halaman apa itu AWS kami.</span
+       >
+      </p>
+      <p class="[&>span]:block [&>span:first-child]:italic [&>span:first-child]:font-semibold [&>span:first-child]:border-b-2">
+       <span>Alibaba Cloud</span
+       ><span
+        >Alibaba Cloud sendiri merupakan perusahaan penyedia layanan cloud computing yang didirikan pada 2009, dan telah menjadi pemimpin global untuk
+        layanan komputasi awan serta artificial intelligence (AI) atau kecerdasan buatan bagi ribuan perusahaan, penegmbang, serta organisasi
+        pemerintah di lebih dari 200 negara dan wilayah.
+       </span>
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+
+  <script src="../dist/js/script.js"></script>
+ </body>
+</html>
